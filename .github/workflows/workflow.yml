@@ -1,0 +1,21 @@
+#Nombre del workflow (Aparece en la UI)
+name: CI Pipeline
+
+# Eventos que disparan el workflow
+on:
+  push:
+    branches: [master, develop]
+
+# Jobs a ejecutar
+jobs:
+  # ID del job
+  build:
+    #Runner a usar
+    runs-on: ubuntu-latest
+
+    # Steps del job
+    steps:
+      # Step 1: Checkout codigo
+      - name: Checkout Repository
+        uses: actions/checkout@v5
+        
