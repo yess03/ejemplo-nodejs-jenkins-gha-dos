@@ -17,5 +17,9 @@ jobs:
     steps:
       # Step 1: Checkout codigo
       - name: Checkout Repository
-        uses: actions/checkout@v5
-        
+        uses: actions/checkout@v6
+        with:
+          node-version: 24
+
+      - name: install dependencies
+        run: npm install
